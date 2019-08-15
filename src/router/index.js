@@ -11,7 +11,7 @@ import additionalService from '@/components/admin/additionalService'
 import Companys from '@/components/admin/companys'
 import Company from '@/components/admin/company'
 import applicant_doc from '@/components/admin/applicant_doc'
-import AddCompany from '@/components/admin/AddCompany'
+import AddCompany from '@/components/admin/addCompany'
 import support from '@/components/admin/support'
 //applicant end
 //manager
