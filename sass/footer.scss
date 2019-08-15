@@ -1,0 +1,106 @@
+@media(max-width: 600px) {
+  #top-footer .tg-column-3:nth-child(2) {
+    justify-content: space-between;
+  }
+}
+/*---Footer Start----*/
+#top-footer {
+  background-color: #ffffff!important;
+}
+#top-footer .textwidget {
+  color: #948e8e;
+  font-size: 11px;
+  line-height: 1.5;
+}
+#top-footer .tg-column-3:nth-child(1) {
+  width: 17%;
+}
+#top-footer .tg-column-3:nth-child(2) {
+  width: 45%;
+  display: flex;
+  justify-content: space-around;
+}
+#top-footer .tg-column-3:nth-child(3) {
+  width: 29%
+}
+#top-footer .widget-title {
+  font-size: 18px;
+  color: #000000!important;
+  border: none;
+  margin-bottom: 15px;
+}
+#top-footer .widget-title:first-letter {
+  color: #000000!important;
+}
+#top-footer .menu {
+  padding-left: 0;
+}
+#top-footer .widget ul li a {
+  font-weight: 500;
+  color: #948e8e;
+}
+#top-footer .widget ul li{
+  padding-left: 0;
+}
+#top-footer .widget ul li::after {
+  content: "";
+}
+#top-footer #media_image-2 a img {
+  padding:0;
+}
+.subscribe-form {
+  position: relative;
+/*padding-left: 20px;*/
+}
+.subscribe-form .form-control {
+  border: 1px solid #fd8e2a;
+  height: 50px;
+  background: #ffffff;
+  outline: none!important;
+  padding: 10px 109px 10px 17px;
+  font-size: 12px;
+  border-radius: 4px;
+}
+.subscribe-form .btn {
+  position: absolute;
+  top: 0;
+  right: -4px;
+  height: 50px;
+  text-transform: uppercase;
+  background-color: #fd8e2a;
+  border-radius: 4px;
+  font-size: 12px;
+  outline: none!important;
+  letter-spacing: 1px;
+}
+#bottom-footer {
+  background-color: #ffffff;
+  border-top: 1px solid #efeded;
+}
+#bottom-footer ul {
+  list-style: none;
+  text-align: center;
+  padding: 0;
+  margin-right:0;
+  float: initial!important;
+}
+#bottom-footer ul li {
+  float: initial;
+  display: inline-block;
+  border-right: 1px solid #948e8e;
+  line-height: 0.7;
+  padding: 0 15px;
+}
+#bottom-footer ul li a {
+  color: #948e8e;
+}
+#bottom-footer ul li a:hover {
+  color: #fd8e2a;
+}
+#bottom-footer ul li:nth-last-child(1) {
+  border: none;
+}
+#top-footer .widget ul li a:hover {
+  color: #fd8e2a;
+}
+/*---Footer End----*/

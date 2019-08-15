@@ -1,0 +1,2101 @@
+@import 'font'
+@import 'donatspie'
+@import "animation"
+@import "colors"
+@import "footer"
+
+
+@import "bootstrap.min"
+@import "selectize"
+@import "disign"
+
+*
+  box-sizing: border-box !important
+body
+  margin: 0
+  padding: 0
+  box-sizing: border-box !important
+  font-family: "Brandon Grotesque"
+  font-size: 18px
+  background-color: $bg_color
+h2
+  font-family: "Brandon Grotesque"
+  font-weight: 500
+  font-size: 3em
+  text-align: center
+  margin-bottom: 0
+  color: $text_color
+h3
+  font-family: "Brandon Grotesque"
+  font-weight: normal
+  font-size: 1em
+  line-height: 1.2em
+  text-align: center
+  color: #2f2f2f
+p
+  font-family: "Brandon Grotesque"
+  font-weight: 500
+  font-size: 1.2em
+  line-height: 1.5em
+  text-align: center
+  color: $text_color
+  margin: 0
+  &.small
+    font-size: .8em
+span
+  font-family: "Brandon Grotesque"
+  font-weight: 500
+  font-size: 1em
+  line-height: 1.5em
+  text-align: center
+  color: $text_color
+.loading
+  background-color: transparent
+  background-image: url("/static/img/loading.gif")
+  background-size: 20px 20px
+  background-position: right center
+  background-repeat: no-repeat
+
+.container
+  width: 100%
+  max-width: 1300px
+  position: relative
+  margin: 0 auto
+  &_header
+    font-family: "Brandon Grotesque"
+    font-weight: bold
+    font-size: 3em
+    letter-spacing: 0.03em
+    line-height: 43.2px
+    text-align: center
+    color: $text_color
+.footer-visa
+  display: inline-block
+  float: right
+  position: absolute
+  right: 0
+  top: -4px
+.widget-title
+  color: #000 !important
+  font-size: 18px !important
+  text-align: left !important
+  font-weight: 900 !important
+
+.box_shadow
+  box-shadow: 0px 7px 13px $shadow
+  filter: drop-shadow(0px 7px 13px rgba($shadow, 0.39))
+.box_shadow_hover
+  &:hover
+    box-shadow: 0px 7px 13px $shadow
+    filter: drop-shadow(0px 7px 13px rgba($shadow, 0.39))
+    cursor: pointer
+.box_shadow_hover_roundshadow
+  &:hover
+    box-shadow: 0px 0px 26px 7px $shadow
+    filter: drop-shadow(0px 7px 13px rgba($shadow, 0.39))
+    cursor: pointer
+.text_shadow
+  text-shadow: 4px 2px 8px $shadow, 0 0 1em $shadow
+.text_shadow_hover
+  &:hover
+    text-shadow: 4px 2px 8px $shadow, 0 0 1em $shadow
+.login-brand
+  display: flex
+  justify-content: center
+  align-items: center
+.container_header
+  height: 100px
+  box-shadow: 0px 2px 10px rgba(0, 1, 5, 0.05)
+  display: flex
+  align-items: center
+  justify-content: center
+  .header
+    width: 100%
+    max-width: 1300px
+    margin: 0 auto
+    display: grid
+    grid-template-columns: 280px 1fr 300px
+    grid-template-areas: 'logo . user_menu'
+    justify-content: center
+    align-items: center
+    .logo
+      margin-left: 60px
+      height: 50px
+      grid-area: logo
+      text-decoration: none
+    .user_menu
+      grid-area: user_menu
+      display: flex
+      align-items: center
+      position: relative
+      .avatar
+        width: 49px
+        height: 49px
+        background-repeat: no-repeat
+        background-size: cover
+        border-radius: 50%
+        margin: 0 10px
+        cursor: pointer
+      .notification
+        width: 30px
+        height: 30px
+        margin: 0 10px
+        cursor: pointer
+        &:hover
+          -webkit-animation: ring 2s ease-in-out
+          -webkit-transform-origin: 50% 4px
+          -moz-animation: ring 2s ease-in-out
+          -moz-transform-origin: 50% 4px
+          animation: ring 2s ease-in-out
+          transform-origin: 50% 4px
+        path
+          fill: $accent
+      .message
+        width: 30px
+        height: 30px
+        margin: 0 10px
+        cursor: pointer
+        &:hover
+          -webkit-animation: chat 0.4s ease-in-out
+          -webkit-transform-origin: 50% 4px
+          -moz-animation: chat 0.4s ease-in-out
+          -moz-transform-origin: 50% 4px
+          animation: chat 0.4s ease-in-out
+          transform-origin: 50% 4px
+        path
+          fill: $accent
+        .st0
+          fill: none
+          stroke: $accent
+          stroke-miterlimit: 10
+        .st1
+          fill: #FFFFFF
+      .logout
+        cursor: pointer
+        font-family: "Brandon Grotesque"
+        font-weight: normal
+        font-size: 17px
+        line-height: 1.1em
+        text-align: center
+        color: #272727
+        text-decoration: none
+        &:hover
+          color: rgba(255, 136, 0, 1)
+.top_menu
+  margin: 50px auto
+  position: relative
+  display: flex
+  justify-content: center
+  align-items: center
+  flex-wrap: wrap
+  a
+    margin: 0 10px
+    font-family: "Brandon Grotesque"
+    font-weight: normal
+    font-size: 1em
+    line-height: 1.2em
+    text-align: center
+    color: $menu_text_color
+    text-decoration: none
+    display: flex
+    justify-content: center
+    align-items: center
+    position: relative
+    background: transparent
+    transition: all .2s ease-in-out
+    height: 33px
+    padding: 0 20px
+    &:not(:nth-child(1))
+      &::before
+        content: '|'
+        position: relative
+        right: 31px
+        color: $text_color
+    &.router-link-active
+      padding: 0 20px
+      height: 33px
+      border-radius: 2px
+      color: $menu_text_color_hover
+      background: linear-gradient($gradient1 0%, $gradient2 0%, $gradient1 96.95%, $gradient1 100%)
+      box-shadow: 0px 7px 13px $shadow
+    &:hover
+      position: relative
+      padding: 0 20px
+      height: 33px
+      border-radius: 2px
+      color: $menu_text_color_hover
+      background: linear-gradient($gradient1 0%, $gradient2 0%, $gradient1 96.95%, $gradient1 100%)
+      box-shadow: 0px 7px 13px $shadow
+footer
+  .top
+    display: grid
+    grid-template-columns: minmax(200px,1fr) repeat(3, minmax(100px, 1fr)) minmax(300px,3fr)
+    .logo
+      height: 50px
+    .main_link
+      color: $menu_text_color
+      text-decoration: none
+      font-family: "Brandon Grotesque Bold"
+      font-size: 1.1em
+      font-weight: 600
+    a
+      display: block
+      text-decoration: none
+      color: $menu_text_color
+      font-family: "Brandon Grotesque"
+      font-size: 1.1em
+      color: $menu_text_color_captions
+      &:hover
+        color: $accent
+  .bottom
+    margin-top: 30px
+    width: 100%
+    border-top: 1px solid rgba(#ccc,.5)
+    position: relative
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-wrap: wrap
+    height: 33px
+    a
+      margin: 0 10px
+      font-family: "Brandon Grotesque"
+      font-weight: normal
+      font-size: 1em
+      line-height: 1.2em
+      text-align: center
+      color: $menu_text_color_captions
+      text-decoration: none
+      display: flex
+      justify-content: center
+      align-items: center
+      position: relative
+      background: transparent
+      transition: all .4s ease-in-out
+      padding: 0 20px
+      &:not(:nth-child(1))
+        &::before
+          content: '|'
+          position: relative
+          right: 31px
+      &:hover
+        position: relative
+        padding: 0 20px
+        height: 33px
+        border-radius: 2px
+        color: $accent
+.subscribe_box
+  border-radius: 5px
+  border: 2px solid $accent
+  display: grid
+  grid-template-columns: 1.5fr 1fr
+  grid-template-areas: '. .'
+  input
+    width: 100%
+    height: 40px
+    background-color: transparent
+    border: none
+    outline: none
+    font-family: "Brandon Grotesque"
+    font-size: 1em
+    color: $menu_text_color
+    padding: 0 20px
+    &::placeholder
+      font-family: "Brandon Grotesque"
+      font-size: 1em
+      color: $menu_text_color
+  button
+    min-width: 150px
+    width: auto
+    cursor: pointer
+    border: none
+    font-family: "Brandon Grotesque"
+    font-size: 0.9em
+    color: $menu_text_color_hover
+    text-transform: uppercase
+    outline: none
+    background: linear-gradient($gradient1 0%, $gradient2 0%, $gradient1 96.95%, $gradient1 100%)
+    transition: all .5s ease-in-out
+    &:hover
+      transition: all .5s ease-in-out
+      background: linear-gradient($gradient2 0%, $gradient1 0%, $gradient2 96.95%, $gradient2 100%)
+
+
+.profile
+  margin: 40px
+  min-height: auto
+  display: grid
+  grid-template-columns: repeat( auto-fit, minmax(450px, 1fr) )
+.personal,.billing
+  margin: 10px
+  max-width: 100%
+  min-width: 44%
+  height: auto
+  border-radius: 5px
+  display: grid
+  grid-template-areas: 'header header' 'header_top header_top' 'left right'
+  grid-template-columns: 1fr 1fr
+  grid-template-rows: 40px 100px 1fr
+  border: 1px solid $border_color
+.personal.registration
+  grid-template-areas: 'header header' 'header_top header_top' 'left right' 'footer footer'
+  grid-template-columns: 1fr 1fr
+  grid-template-rows: 40px 100px 1fr auto
+.billing
+  grid-template-areas: 'header header' 'left right'
+  grid-template-rows: 40px 1fr
+  //height: 288px !important
+.profile_header
+  grid-area: header
+  font-family: "Brandon Grotesque"
+  font-weight: normal
+  font-size: 1em
+  line-height: 1.2em
+  text-align: center
+  color: $prifile_header
+  margin-top: 7px
+.prifile_header_top
+  grid-area: header_top
+  display: flex
+  justify-content: center
+  align-items: center
+.change_avatar
+  width: 100px
+  height: 100px
+  border: 2px solid transparent
+  border-radius: 50%
+  background-color: #F9F9F9
+  display: flex
+  justify-content: center
+  align-items: center
+  cursor: pointer
+  overflow: hidden
+  .change_avatar_img
+    height: 50px
+    path
+      fill: #959595
+    .st0
+      fill: none
+  &:hover
+    border: 2px solid $accent
+    .change_avatar_img
+      animation: HOVER 1s infinite
+      path
+        fill: $accent
+    img
+      border: 2px solid $accent
+.profile_header_left
+  grid-area: left
+  padding: 20px
+.profile_header_right
+  grid-area: right
+  padding: 20px
+.profile_footer
+  grid-area: footer
+.billing_header
+  grid-area: header
+  font-family: "Brandon Grotesque"
+  font-weight: normal
+  font-size: 1em
+  line-height: 1.2em
+  text-align: center
+  color: $prifile_header
+  margin-top: 7px
+
+.billing_header_left
+  grid-area: left
+  padding: 20px
+.billing_header_right
+  grid-area: right
+  padding: 20px
+a
+  font-family: "Brandon Grotesque"
+  font-weight: 500
+  font-size: 1em
+  line-height: 1.2em
+  text-align: center
+  color: $text_color
+  &:hover
+    color: $accent
+.input_group
+  position: relative
+  margin: 10px 0
+  input, textarea, select
+    position: relative
+    border: 1px solid $profile_input_border_normal
+    text-align: left
+    width: 100%
+    height: 40px
+    font-family: "Brandon Grotesque"
+    font-weight: 500
+    font-size: .8em
+    letter-spacing: 0.05em
+    outline: none
+    padding: 0 5px
+    color: $profile_input_text
+    background-color: transparent
+    &+label
+      position: absolute
+      top: -6px
+      left: 6px
+      font-family: "Brandon Grotesque"
+      font-weight: 500
+      font-size: 0.8em
+      letter-spacing: 0.05em
+      line-height: .8em
+      text-align: left
+      z-index: 1
+      color: $prifile_header
+      background-color: $bg_color
+    &:disabled
+      border: 1px solid #ccc
+      cursor: not-allowed
+    &:disabled ~ label
+      position: absolute
+      top: -6px
+      left: 6px
+      font-family: "Brandon Grotesque"
+      font-weight: 500
+      font-size: 0.8em
+      letter-spacing: 0.05em
+      line-height: .8em
+      text-align: left
+      z-index: 1
+      color: $prifile_header
+      background-color: $bg_color
+  textarea
+    height: 100%
+  input[type="checkbox"]
+    display: none
+  input[type="checkbox"] + label
+    outline: none
+    height: 18px
+    display: inline-block
+    position: relative
+    top: 0
+    left: 0
+    border-radius: 7px
+    bottom: 25px
+    right: 40px
+    padding: 5px 0 0 26px
+    //margin: 10px
+    cursor: pointer
+  input[type="checkbox"] + label:last-child
+    margin-bottom: 0
+  input[type="checkbox"] + label::before
+    content: ''
+    display: block
+    width: 16px
+    height: 16px
+    border: 2px solid $accent
+    border-radius: 7px
+    position: absolute
+    left: 0
+    top: 0
+    opacity: .6
+    -webkit-transition: all .3s, border-color .3s
+    transition: all .3s, border-color .3s
+  input[type="checkbox"] + label::after
+    content: ''
+    position: absolute
+    opacity: 0
+    width: 0
+    height: 0
+    transition: all .5s ease-in-out
+  input[type="checkbox"]:checked + label::before
+    content: ''
+    width: 4px
+    top: -6px
+    left: 10px
+    height: 15px
+    border-radius: 0
+    border: 2px solid $accent
+    opacity: 1
+    border-top-color: transparent
+    border-left-color: transparent
+    -webkit-transform: rotate(45deg)
+    transform: rotate(45deg)
+  input[type="checkbox"]:checked + label::after
+    content: ''
+    position: absolute
+    top: 0
+    left: 0
+    border: 2px solid $accent
+    border-radius: 7px
+    width: 16px
+    height: 16px
+    opacity: 1
+  input[type="radio"]
+    display: none
+  input[type="radio"] + label
+    outline: none
+    height: 18px
+    display: inline-block
+    position: relative
+    top: 0
+    left: 0
+    border-radius: 7px
+    bottom: 25px
+    right: 40px
+    padding: 5px 0 0 26px
+    //margin: 10px
+    cursor: pointer
+  input[type="radio"] + label:last-child
+    margin-bottom: 0
+  input[type="radio"] + label::before
+    content: ''
+    display: block
+    width: 16px
+    height: 16px
+    border: 2px solid $accent
+    border-radius: 7px
+    position: absolute
+    left: 0
+    top: 0
+    opacity: .6
+    -webkit-transition: all .3s, border-color .3s
+    transition: all .3s, border-color .3s
+  input[type="radio"] + label::after
+    content: ''
+    position: absolute
+    opacity: 0
+    width: 0
+    height: 0
+    transition: all .5s ease-in-out
+  input[type="radio"]:checked + label::before
+    content: ''
+    width: 4px
+    top: 6px
+    left: 6px
+    height: 4px
+    border-radius: 50%
+    border: 2px solid $accent
+    opacity: 1
+    -webkit-transform: rotate(45deg)
+    transform: rotate(45deg)
+  input[type="radio"]:checked + label::after
+    content: ''
+    position: absolute
+    top: 0
+    left: 0
+    border: 2px solid $accent
+    border-radius: 7px
+    width: 16px
+    height: 16px
+    opacity: 1
+  .checkbox
+    position: relative
+    width: 80px
+    height: 50px
+    cursor: pointer
+    transition: all .2s ease-in-out
+    margin: 0 40px
+    .off_caption
+      position: absolute
+      top: 18px
+      left: -40px
+      font-family: Raleway
+      font-weight: bold
+      font-size: .8em
+      line-height: 1em
+      text-align: left
+      color: #c5c5c5
+      text-transform: uppercase
+      transition: all .2s ease-in-out
+      opacity: 1
+    .checkbox_body
+      position: absolute
+      top: 0px
+      left: 0px
+      width: 80px
+      height: 50px
+      border-radius: 25px
+      background: #e3e2e4
+      transition: all .2s ease-in-out
+    .checkbox_check
+      position: absolute
+      top: 5px
+      left: 5px
+      font-size: 3em
+      line-height: 29px
+      text-align: center
+      color: #f80
+      width: 40px
+      height: 40px
+      border-radius: 50%
+      background: #fff
+      filter: drop-shadow(0px 3px 5px rgba(0,0,0,0.15))
+      transition: all .25s ease-in-out
+    .on_caption
+      position: absolute
+      top: 18px
+      left: 92px
+      font-family: Raleway
+      font-weight: bold
+      font-size: .8em
+      line-height: 1em
+      text-align: left
+      color: $accent
+      text-transform: uppercase
+      opacity: 0
+      transition: all .2s ease-in-out
+    &.active
+      .off_caption
+        opacity: 0
+      .checkbox_body
+        background: rgba($accent, .5)
+      .checkbox_check
+        left: 35px
+      .on_caption
+        opacity: 1
+    &.small
+      width: 60px
+      height: 30px
+      .off_caption
+        top: 9px
+      .checkbox_body
+        width: 60px
+        height: 30px
+      .checkbox_check
+        font-size: 1.5em
+        line-height: 16px
+        width: 20px
+        height: 20px
+      .on_caption
+        top: 9px
+    &.duble
+      .off_caption
+        top: 9px
+        opacity: 1
+        color: $accent
+      .checkbox_body
+        width: 60px
+        height: 30px
+      .checkbox_check
+        font-size: 1.5em
+        line-height: 16px
+        width: 20px
+        height: 20px
+      .on_caption
+        top: 9px
+        opacity: 1
+        color: #c5c5c5
+      &.active
+        .off_caption
+          top: 9px
+          opacity: 1
+          color: #c5c5c5
+        .checkbox_body
+          width: 60px
+          height: 30px
+          background: rgba(#c5c5c5, .5)
+        .checkbox_check
+          font-size: 1.5em
+          line-height: 16px
+          width: 20px
+          height: 20px
+        .on_caption
+          top: 9px
+          opacity: 1
+          color: $accent
+
+  &.col3toCol1
+    display: grid !important
+    grid-template-areas: 'col3 col1' !important
+    grid-template-columns: 3fr 1fr !important
+    grid-gap: 5px
+    .col3
+      grid-area: col3
+      input
+        width: 100%
+    .col1
+      grid-area: col1
+      input
+        width: 100%
+  &.col1toCol1
+    display: grid !important
+    grid-template-areas: 'col1 toCol1' !important
+    grid-template-columns: 1fr 1fr !important
+    grid-gap: 5px
+    .col1
+      grid-area: col1
+      input
+        width: 100%
+    .toCol1
+      grid-area: toCol1
+      input
+        width: 100%
+  .ok
+    border: 1px solid $profile_input_border_ok
+  .err
+    border: 1px solid $profile_input_border_err
+.vs__dropdown-menu
+  z-index: 999 !important
+.col1toCol1
+  display: grid !important
+  grid-template-areas: 'col1 toCol1' !important
+  grid-template-columns: 1fr 1fr !important
+  grid-gap: 5px
+  .col1
+    grid-area: col1
+    width: 100%
+  .toCol1
+    grid-area: toCol1
+    width: 100%
+.flexSpaceAround
+  display: flex
+  justify-content: space-around
+  align-items: center
+  flex-wrap: wrap
+.addcompany
+  position: relative
+  min-height: 500px
+  .button
+    margin: 0 auto
+    display: flex
+    justify-content: center
+    align-items: center
+    cursor: pointer
+    width: 100px
+    height: 100px
+    border-radius: 50%
+    border: none
+    background-color: $accent
+    font-family: "Brandon Grotesque"
+    font-size: 6em
+    color: $menu_text_color_hover
+    transition: all .3s ease-in-out
+  &.modal_show
+    //filter: blur(2px)
+.modal-mask
+  position: fixed
+  z-index: 9998
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+  background-color: rgba(0, 0, 0, .8)
+  display: table
+  transition: opacity .3s ease
+  .modal-wrapper
+    display: table-cell
+    vertical-align: middle
+    .modal-container
+      width: 300px
+      margin: 0px auto
+      padding: 20px 30px
+      background-color: #fff
+      border-radius: 2px
+      box-shadow: 0 2px 8px rgba(0, 0, 0, .33)
+      overflow: visible
+      transition: all .3s ease
+      font-family: Helvetica, Arial, sans-serif
+      position: relative
+      .modal-header h3
+        margin-top: 0
+        color: #42b983
+      .modal-body
+        margin: 20px 0
+  .modal-default-button
+    float: right
+  .modal-enter
+    opacity: 0
+  .modal-leave-active
+    opacity: 0
+  .modal-enter .modal-container,.modal-leave-active .modal-container
+    -webkit-transform: scale(1.1)
+    transform: scale(1.1)
+
+
+
+.companys
+  display: grid
+  grid-template-rows: 60px 1fr
+  grid-template-areas: 'companys_header_top''companys_body'
+  grid-template-columns: 1fr
+  min-height: 500px
+  height: auto
+  &_header_top
+    margin: 0
+    grid-area: companys_header_top
+    font-family: "Brandon Grotesque"
+    font-weight: bold
+    font-size: 3em
+    text-align: center
+    margin-bottom: 0
+    color: $text_color
+  &_body
+    grid-area: companys_body
+    display: grid
+    justify-content: center
+    align-items: center
+    position: relative
+    grid-template-columns: repeat(auto-fit,minmax(250px, 290px))
+    grid-gap: 30px
+    .companys_company
+      position: relative
+      margin: 20px
+      max-width: 290px
+      height: 300px
+      border-radius: 5px
+      background: transparent
+      border: 1px solid $border_color
+      padding: 5px 0
+      overflow: hidden
+      cursor: pointer
+      &:hover
+        .company_more
+          bottom: 0px
+      &.new
+        border: 2px dashed $border_color
+        .company_header
+          text-transform: none
+        &:hover
+          .add-comp-btn
+            div
+              animation-duration: 0.5s
+              animation-name: addCompBtn_in
+      .company_flag
+        position: absolute
+        right: -25px
+        top: -17px
+        transform: rotate(45deg)
+        width: 75px
+        height: 60px
+      .company_date
+        font-family: "Brandon Grotesque"
+        font-weight: bold
+        font-size: .5em
+        letter-spacing: 0.08em
+        line-height: .8em
+        margin: 5px 5px
+        color: rgba($text_color, .5)
+        display: block
+        text-align: left
+      .company_header
+        text-transform: uppercase
+        font-family: "Brandon Grotesque"
+        font-weight: bold
+        font-size: .9em
+        line-height: 1em
+        text-align: center
+        color: $text_color
+        margin: 10px 0 0 0
+      .company_country
+        font-family: "Brandon Grotesque"
+        font-weight: 500
+        font-size: .9em
+        line-height: 1em
+        text-align: center
+        color: $text_color
+      .company_more
+        display: flex
+        justify-content: center
+        align-items: center
+        position: absolute
+        bottom: -100px
+        width: 100%
+        height: 36px
+        border-radius: 0px 0px 5px 5px
+        background: linear-gradient($gradient1 0%, $gradient2 0%, $gradient1 96.95%, $gradient1 100%)
+        font-family: "Brandon Grotesque"
+        font-weight: bold
+        font-size: .9em
+        letter-spacing: 0.08em
+        line-height: 1.1em
+        text-align: center
+        text-transform: uppercase
+        color: $menu_text_color_hover
+        transition: bottom .2s ease-in-out
+      .company_edit
+        display: flex
+        justify-content: center
+        align-items: center
+        width: 100%
+        height: 36px
+        border-radius: 0px 0px 5px 5px
+        background: linear-gradient($gradient1 0%, $gradient2 0%, $gradient1 96.95%, $gradient1 100%)
+        font-family: "Brandon Grotesque"
+        font-weight: bold
+        font-size: .9em
+        letter-spacing: 0.08em
+        line-height: 1.1em
+        text-align: center
+        text-transform: uppercase
+        color: $menu_text_color_hover
+        transition: bottom .2s ease-in-out
+
+.centrize
+  display: flex
+  justify-content: center
+  align-items: center
+  width: 100%
+  height: auto
+  margin: 0 auto
+.doughnut
+  display: inline-block
+  width: 141px
+  height: 141px
+  position: relative
+  margin: 30px auto
+  .doughnut_chart
+    position: relative
+    margin: 0 auto
+    display: block
+    .percent
+      display: none
+    svg
+      path
+        fill: #EEF0EF
+      &:hover
+        path
+          fill: #EEF0EF
+  .doughnut_chart_after
+    position: relative
+    margin: 0 auto
+    top: -94px
+    //left: 84px
+    width: 50px
+    height: 50px
+    border-radius: 50%
+    display: flex
+    justify-content: center
+    align-items: center
+    font-size: .9em
+    font-family: "Brandon Grotesque"
+    color: $menu_text_color_hover
+    box-shadow: 0 6px 16px 0 rgba(0,0,0, 0.29)
+    &::before
+      content: ""
+      position: absolute
+      top: -25px
+      left: -25px
+      width: 100px
+      height: 100px
+      background: #eef0ef
+      z-index: -1
+      border-radius: 50%
+      filter: drop-shadow(0px 6px 13px rgba(0,1,5,0.19))
+button
+  cursor: pointer
+  border: none
+  min-width: 150px
+  height: 40px
+  font-family: "Brandon Grotesque"
+  font-size: 0.9em
+  color: $menu_text_color
+  outline: none
+  transition: all .5s ease-in-out
+  &:disabled
+    cursor: not-allowed
+    background: #ccc
+.button
+  display: inline-block
+  margin: 0 10px
+  height: 40px
+  font-size: 14px
+  font-weight: 700
+  width: 100%
+  max-width: 200px
+  vertical-align: top
+  background: $gradient1
+  background: -moz-linear-gradient(-45deg, $gradient1 0%, $gradient1 70%, $gradient2 100%)
+  background: -webkit-linear-gradient(-45deg, $gradient1 0%, $gradient1 70%,$gradient2 100%)
+  background: linear-gradient(135deg, $gradient1 0%, $gradient1 70%,$gradient2 100%)
+  box-shadow: 0 7px 13px 0 rgba(255, 136, 0, 0.39)
+  font-family: "Brandon Grotesque"
+  color: $menu_text_color_hover
+  text-transform: uppercase
+  outline: none
+  transition: all .5s ease-in-out
+  &:hover,&:focus,&:active
+    transition: all .5s ease-in-out
+    background: $gradient2
+    background: -moz-linear-gradient(-45deg, $gradient2 0%, $gradient2 70%, $gradient1 100%)
+    background: -webkit-linear-gradient(-45deg, $gradient2 0%, $gradient2 70%,$gradient1 100%)
+    background: linear-gradient(135deg, $gradient2 0%, $gradient2 70%,$gradient1 100%)
+    box-shadow: 0 7px 13px 0 rgba(255, 136, 0, 0.39)
+  &.selected
+    background: linear-gradient($gradient1 0%, #ccc 0%, #ccc 96.9%, $gradient2 100%)
+    cursor: pointer
+  &:disabled
+    cursor: not-allowed
+    background: #ccc
+  &.confirm
+    background: linear-gradient(#f3300c 0%, #1ed75f 0%, #06c248 96.9%, #06c248 100%)
+    box-shadow: 0 6px 16px rgba(6, 194, 72, 0.29)
+    cursor: pointer
+  &.notConfirm
+    background: linear-gradient(#fb9f35 0%, #f3300c 0%, #dc2200 96.9%, #dc2200 100%)
+    box-shadow: 0px 5px 8px rgba(243, 48, 12, 0.22)
+    cursor: not-allowed
+a.button
+  display: flex !important
+  justify-content: center !important
+  align-items: center !important
+  text-decoration: none !important
+.center_block
+  display: block
+  margin: 0 auto
+  .modal_success
+    position: relative
+    bottom: -40px
+    margin: 0 auto
+.table
+  border: 1px solid $border_color !important
+  border-radius: 3px
+  background: #fff
+  max-height: 100px
+  .tableHeader
+    display: grid
+    grid-template-columns: repeat(auto-fit, minmax(50px , 1fr))
+    font-family: "Brandon Grotesque"
+    font-weight: 500
+    font-size: .7em
+    letter-spacing: 0.05em
+    line-height: 1em
+    text-align: left
+    color: $text_color
+    background: #fff
+    overflow: hidden
+    height: 30px
+    align-items: center
+    text-decoration: none
+  &_body
+    overflow-x: hidden
+    overflow-y: scroll
+    max-height: 60px
+    .tableRow
+      display: grid
+      grid-template-columns: repeat(auto-fit, minmax(50px , 1fr))
+      font-family: "Brandon Grotesque"
+      font-weight: normal
+      font-size: .7em
+      letter-spacing: 0.05em
+      line-height: 1em
+      text-align: left
+      min-height: 30px
+      height: auto
+      color: $text_color
+      //overflow: hidden
+      align-items: center
+      text-decoration: none
+      padding: 5px
+      &:nth-child(even)
+        background: #f2f2f2
+.flex2col
+  display: flex
+  justify-content: space-around
+  align-items: center
+  flex-wrap: wrap
+  div
+    width: 48% !important
+
+.loginin
+  position: relative
+  max-width: 500px
+  margin: 25vh auto
+
+.package
+  margin-bottom: 60px
+  p
+    img
+      height: 1.5em
+      position: relative
+      top: 2px
+      left: .5em
+  &_body
+    margin-top: 40px
+    display: grid
+    align-items: center
+    grid-template-columns: repeat(auto-fit, minmax(290px,1fr))
+    .pack
+      position: relative
+      height: auto
+      background: #fff
+      border: 1px solid #eef0ef
+      transition: all 1s ease-in-out
+      &::before
+        content: ''
+        position: absolute
+        top: 0
+        left: 25%
+        width: 146px
+        height: 4px
+        background: $package_top_bottom
+      &::after
+        content: ''
+        position: absolute
+        bottom: 0
+        left: 25%
+        width: 146px
+        height: 4px
+        background: $package_top_bottom
+      &_price
+        margin: 0
+        font-family: "Brandon Grotesque"
+        font-weight: 900
+        font-size: 2em
+        line-height: 2em
+        text-align: center
+        color: $text_color
+      &_type
+        display: flex
+        align-items: center
+        justify-content: center
+        width: 100%
+        height: 50px
+        background: linear-gradient(#eaeaea 0%, #fafafa 87.6%, #fafafa 100%)
+        font-family: "Brandon Grotesque"
+        font-weight: 900
+        font-size: 1.2em
+        letter-spacing: 0.08em
+        line-height: 1.5em
+        color: $text_color
+        text-transform: uppercase
+      &_list
+        padding: 10px 20px 10px 20px
+        font-family: "Brandon Grotesque"
+        font-weight: normal
+        font-size: .8em
+        letter-spacing: -0.02em
+        line-height: 1.2em
+        text-align: center
+        color: $package_list_text_normal
+        display: flex
+        justify-content: center
+        align-items: center
+        flex-wrap: wrap
+        li
+          display: block
+          width: 100%
+        li.unenabled
+          color: $package_list_text_unenabled
+      &_button
+        margin: 20px auto 25px auto
+        display: flex
+        justify-content: center
+        align-items: center
+        width: 202px
+        height: 43px
+        border-radius: 2px
+        background: transparent
+        border: 2px solid $accent
+        text-transform: uppercase
+        font-family: Raleway
+        font-weight: bold
+        font-size: .9em
+        line-height: 1.2em
+        text-align: center
+        color: $text_color
+        transition: all .5s ease-in-out
+        &:hover
+          cursor: pointer
+          background: linear-gradient(#f80 0%, #fb9f35 0%, #f80 96.95%, #f80 100%)
+          border: 2px solid $accent
+          color: $menu_text_color_hover
+      &.active
+        position: relative
+        width: 294px
+        height: auto
+        border: 1px solid $package_border_color
+        box-shadow: 0px 0px 24px rgba(0, 0, 0, 0.1)
+        transform: scale(1.07)
+        &::before
+          content: ''
+          position: absolute
+          top: 0
+          left: 25%
+          width: 146px
+          height: 4px
+          background: $package_top_bottom_active
+        &::after
+          content: ''
+          position: absolute
+          bottom: 0
+          left: 25%
+          width: 146px
+          height: 4px
+          background: $package_top_bottom_active
+        .pack_type
+          width: 100%
+          height: 50px
+          background: linear-gradient(#f80 0%, #fb9f35 0%, #f80 96.95%, #f80 100%)
+          box-shadow: 0px 7px 13px rgba(255, 136, 0, 0.39)
+          text-transform: uppercase
+          color: $package_active_button_text_color
+        .pack_button
+          background: linear-gradient(#f80 0%, #fb9f35 0%, #f80 96.95%, #f80 100%)
+          border: 2px solid $accent
+          color: $menu_text_color_hover
+          &:hover
+            cursor: pointer
+            background: transparent
+            color: $text_color
+        .pack_list
+          font-family: "Brandon Grotesque"
+          font-weight: normal
+          font-size: .8em
+          letter-spacing: -0.02em
+          line-height: 1.2em
+          text-align: center
+          color: $package_list_text_normal
+          display: flex
+          justify-content: center
+          align-items: center
+          flex-wrap: wrap
+          li
+            display: block
+            width: 100%
+          li.unenabled
+            display: block
+            color: $package_list_text_unenabled
+  &_footer
+    display: flex
+    justify-content: center
+    align-self: center
+    margin: 55px
+    .button
+      padding: 0 20px
+.additionalService
+  p
+    img
+      height: 1.5em
+      position: relative
+      top: 2px
+      left: .5em
+  &_body
+    display: flex
+    justify-content: space-around
+    flex-wrap: wrap
+    .service
+      margin-top: 20px
+      width: 265px
+      min-height: 160px
+      background: #fff
+      padding: 10px 20px
+      border: 1px solid $package_border_color
+      &_price
+        font-family: "Brandon Grotesque"
+        font-weight: bold
+        font-size: 1em
+        line-height: 1.2em
+        text-align: left
+        color: $accent
+      &_header
+        margin-top: 5px
+        font-family: "Brandon Grotesque"
+        font-weight: 900
+        font-size: 1em
+        line-height: 1.2em
+        text-align: left
+        color: $text_color
+      &_caption
+        margin-top: 5px
+        font-family: "Brandon Grotesque"
+        font-weight: 500
+        font-size: .9em
+        line-height: 1.2em
+        text-align: left
+        color: $text_color
+      .center
+        display: flex
+        justify-content: center
+        align-items: center
+      &.active
+        border: 1px solid $accent
+  &_footer
+    display: flex
+    justify-content: center
+    align-self: center
+    margin: 55px
+    .button
+      padding: 0 20px
+
+.fade-enter-active, .fade-leave-active
+  transition: all .5s ease-in-out
+.fade-enter, .fade-leave-to
+  opacity: 0
+.text_accent
+  color: $accent !important
+.text_err
+  color: red
+.right_align
+  text-align: right !important
+
+.add-comp-btn
+  background: #ff8800
+  background: -moz-linear-gradient(-45deg, #ff8800 0%, #ff8800 70%, #fb9e35 100%)
+  background: -webkit-linear-gradient(-45deg, #ff8800 0%, #ff8800 70%,#fb9e35 100%)
+  background: linear-gradient(135deg, #ff8800 0%, #ff8800 70%,#fb9e35 100%)
+  color: #fff
+  font-weight: 700
+  width: 100px
+  height: 100px
+  border-radius: 50%
+  display: block
+  margin: 40px auto auto auto
+  position: relative
+  cursor: pointer
+  div
+    width: 44px
+    height: 44px
+    position: absolute
+    top: 50%
+    left: 50%
+    margin-top: -22px
+    margin-left: -22px
+    span
+      top: 50%
+      margin-top: -5px
+      left: 0
+      position: absolute
+      width: 100%
+      display: block
+      height: 10px
+      background-color: #fff
+      border-radius: 2px
+      &:last-child
+        transform: rotate(-90deg)
+  &:hover
+    div
+      animation-duration: 0.5s
+      animation-name: addCompBtn_in
+
+
+.terms_info
+  margin: 40px 0
+.payment
+  margin-bottom: 60px
+  p
+    img
+      height: 1.5em
+      position: relative
+      top: 2px
+      left: .5em
+  .infoCards
+    display: flex
+    h3
+      grid-area: caption
+    .card
+      margin: 10px
+      width: 50%
+      height: auto
+      border-radius: 5px
+      background: #fff
+      border: 1px solid #e3e1e1
+      display: grid
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr))
+      grid-template-areas: 'caption caption' 'billingCheck billingCheck ' 'left right'
+      grid-gap: 0 20px
+      .left
+        grid-area: left
+        padding: 20px
+        &.cards
+          position: relative
+          display: flex
+          align-items: center
+          .cardimg
+            width: 100%
+            height: auto
+          .cardlogoimg
+            position: absolute
+            width: 50px
+            height: 20px
+            right: 36px
+            top: 68px
+      .right
+        grid-area: right
+        padding: 20px
+    .cardWire
+      margin: 10px
+      width: 100%
+      min-width: 600px
+      height: auto
+      border-radius: 5px
+      background: #fff
+      border: 1px solid #e3e1e1
+      padding: 30px
+  .success,.error
+    h3
+      font-family: "Brandon Grotesque"
+      font-weight: bold
+      font-size: 3em
+      letter-spacing: 0.03em
+      text-align: center
+      color: #222
+      margin: 20px
+#holder
+  text-transform: uppercase
+.selecter
+  display: flex
+  justify-content: center
+  align-items: center
+  margin: 10px 30px 50px 30px
+  button
+    display: flex !important
+    margin: 0 10px
+    justify-content: center
+    align-items: center
+    transition: all .3s ease-in-out
+    &:hover
+      border: 2px solid $accent
+.hr_footer
+  margin-top: 20px
+  padding: 30px
+  border-top: 1px solid #ccc
+  display: flex
+  justify-content: flex-end
+  align-items: center
+.errorImg
+  width: 150px
+  margin: 0 auto
+  .st0
+    fill: url(#SVGID_2)
+.successImg
+  width: 150px
+  margin: 0 auto
+  .st0
+    fill: url(#SVGID_1)
+.billingCheck
+  grid-area: billingCheck
+#ubo_birth
+  width: 100%
+  height: 100%
+  border: none
+  background-color: transparent
+  outline: none
+.preload
+  position: absolute
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
+  display: flex
+  justify-content: center
+  .dash
+    margin: 0 15px
+    width: 35px
+    height: 8px
+    border-radius: 10px
+    background: #ff6508
+    box-shadow: 0 0 10px 0 #ffcf85
+    &.uno
+      margin-right: -18px
+      transform-origin: center left
+      animation: spin 3s linear infinite
+    &.dos
+      transform-origin: center right
+      animation: spin2 3s linear infinite
+      animation-delay: .2s
+    &.tres
+      transform-origin: center right
+      animation: spin3 3s linear infinite
+      animation-delay: .3s
+    &.cuatro
+      transform-origin: center right
+      animation: spin4 3s linear infinite
+      animation-delay: .4s
+
+.settings-modal
+  p
+    text-align: left
+    margin-bottom: 1rem
+    font-size: 14px
+    font-weight: 300
+  span
+    font-family: "Brandon Grotesque"
+    font-weight: 300
+    font-size: 14px
+    line-height: 1.1em
+    text-align: center
+    color: #464646
+  label
+    font-size: 14px
+  .ubo-checkboxes
+    span
+      font-size: 16px
+.signature-pad
+  border: 2px solid #ccc
+  &.ok
+    border: 2px solid green
+  &.err
+    border: 2px solid red
+  canvas
+    width: 350px !important
+    height: 150px !important
+.fatca-form
+  ul
+    li
+      line-height: 1
+      font-size: 14px
+      font-weight: 300
+      font-family: "Brandon Grotesque"
+
+
+///manager cabinet
+
+.border
+  border-radius: 5px
+  border: 1px solid $border_color !important
+  outline: none
+  &.accent
+    border: 1px solid $accent !important
+.padding
+  padding: 10px !important
+.box_header
+  grid-area: header
+  font-family: "Brandon Grotesque"
+  font-weight: normal
+  font-size: 1em
+  line-height: 1.2em
+  text-align: center
+  color: $prifile_header
+  margin-top: 7px
+.tripple
+  display: grid
+  grid-template-columns: repeat(auto-fit, minmax(290px, 1fr))
+  grid-gap: 20px
+.duble_side_box
+  display: grid
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr))
+  grid-gap: 20px
+.users_buttons
+  margin: 0 auto
+  max-width: 320px
+  width: 100%
+  display: grid
+  grid-template-columns: repeat(auto-fit, minmax(150px,1fr))
+  grid-gap: 20px
+  height: 60px
+  align-items: self-end
+.buttons
+  display: flex
+  justify-content: center
+  margin: 20px
+.addnew,.removeold
+  position: relative
+.addnew:hover
+  cursor: pointer
+  .add
+    filter: drop-shadow(0px 7px 13px rgba(255, 136, 0, 0.39))
+  label
+    color: $accent
+.removeold
+  &::before
+    content: '|'
+    color: $text_color
+    position: absolute
+    top: 2px
+    left: -8px
+  &:hover
+    cursor: pointer
+    .remove
+      filter: drop-shadow(0px 5px 8px rgba(243, 48, 12, 0.22))
+    label
+      color: $accent
+.add
+  width: 32px
+  height: 32px
+  border-radius: 50%
+  background: linear-gradient(#f80 0%, #fb9f35 0%, #f80 96.9%, #f80 100%)
+  font-weight: normal
+  font-size: 45px
+  line-height: 60px
+  text-align: center
+  color: #fff
+  display: inline-flex
+  justify-content: center
+  align-items: center
+  &~ label
+    position: relative
+    top: -10px
+    left: 13px
+.remove
+  width: 32px
+  height: 32px
+  border-radius: 50%
+  background: linear-gradient(#fb9f35 0%, #f3300c 0%, #dc2200 96.9%, #dc2200 100%)
+  position: relative
+  display: inline-block
+  &~ label
+    position: relative
+    top: -10px
+    left: 13px
+  img
+    width: 15px
+    height: 17px
+    position: absolute
+    top: 7px
+    left: 8px
+.magnifier
+  width: 12px
+  height: 12px
+  margin-left: 5px
+  margin-right: 5px
+.edit
+  width: 12px
+  height: 12px
+  margin: 0 10px 0 10px
+.removeRow
+  width: 12px
+  height: 12px
+  margin: 0 10px 0 10px
+.vs__dropdown-toggle
+  height: 40px !important
+  border: none !important
+  position: relative !important
+  top: -5px !important
+  width: 100% !important
+  overflow: hidden
+  .vs__selected-options
+    .vs__selected
+      top: 4px
+      position: relative
+    .vs__search
+      border: none
+      background-color: transparent
+  .vs__actions
+    .vs__clear
+      display: none !important
+
+
+///chat
+
+.messWrapper
+  display: grid
+  grid-template-columns: 1fr
+  grid-template-areas: "messManagerBox" "messSelect" "inputbox"
+  grid-template-rows: 57px 1fr 46px
+  font-size: 18px
+  position: absolute
+  top: 80px
+  border-radius: 5px
+  border: 2px solid $accent
+  background-color: white
+  padding: 10px
+  z-index: 9999
+.messManagerBox
+  grid-area: messManagerBox
+  position: relative
+  //height: 90px
+  //margin-top: 12px
+  //margin-left: 30px
+  .messManagerAvatar
+    position: relative
+    width: 40px
+    height: 40px
+    border: none
+    border-radius: 50%
+    background-position: center
+    background-repeat: no-repeat
+    background-size: cover
+    float: left
+    &::after
+      content: ''
+      width: 11.53px
+      height: 11.53px
+      background-color: #5EE2A0
+      position: absolute
+      bottom: 0
+      right: -3px
+      border: none
+      border-radius: 50%
+  .messManagerName
+    position: relative
+    top: 14px
+    left: 17px
+    font-family: "Source Sans Pro", sans-serif
+    font-weight: normal
+    font-size: 1em
+    line-height: 14px
+    text-align: left
+    color: $text_color
+  .messManagerTitle
+    position: relative
+    top: 18px
+    left: 17px
+    font-family: "Source Sans Pro", sans-serif
+    text-align: right
+    color: $text_color
+    font-weight: normal
+    font-size: 1em
+    line-height: 27px
+    opacity: 0.5
+    padding-right: 24px
+  .messCloseBox
+    position: absolute
+    top: -26px
+    right: -26px
+    transform: rotate(45deg)
+    background-color: white
+.messSelect
+  grid-area: messSelect
+  opacity: 1
+  transition: 2s ease-in-out all
+  height: 100%
+  .messages
+    position: relative
+    width: 98%
+    height: 100%
+    margin: 0 auto
+    border-top: 4px solid #E8E9EC
+    border-bottom: 4px solid #E8E9EC
+    overflow: scroll
+    display: grid
+    .mrow
+      margin: 5px 0
+      //padding: 15px
+      position: relative
+      display: block
+      //min-height: 55px
+      .out,.in
+        position: relative
+        max-width: 60%
+        min-height: auto
+        padding: 7px 30px
+        font-size: 1em
+        font-weight: 300
+        line-height: 1em
+        &::after
+          content: ''
+          clear: both
+      .out
+        float: left
+        background-color: #EDF0F5
+        color: $mess_accent_text
+        border-bottom-left-radius: 20px
+        border-top-right-radius: 20px
+        border-bottom-right-radius: 20px
+      .in
+        float: right
+        background-color: $mess_accent
+        color: $btn_text_color
+        border-top-left-radius: 20px
+        border-top-right-radius: 20px
+        border-bottom-left-radius: 20px
+        attachments
+          &::before
+            content: ''
+            width: 25px
+            height: 25px
+            background-image: url("/static/img/attachment.svg")
+            background-size: 25px 25px
+            background-repeat: no-repeat
+            position: absolute
+            left: -25px
+        .mess_status
+          position: absolute
+          bottom: 0px
+          right: 10px
+          color: $mess_status
+          letter-spacing: -4px
+        &::after
+          content: ''
+          clear: both
+.inputbox
+  grid-area: inputbox
+  padding: 3px 5px
+  display: grid
+  grid-template-columns: 30px 1fr 30px
+  grid-template-areas: "attach input send"
+  grid-gap: 0px 7px
+  align-items: baseline
+  .attach
+    grid-area: attach
+    width: 30px
+    height: 30px
+    stroke: $text_color
+    fill: $text_color
+    position: relative
+    top: 12px
+    cursor: pointer
+    transition: all .5s ease-in-out
+    &:hover
+      fill: $accent
+  input.form-control
+    grid-area: input
+    background-color: transparent
+    width: auto
+    margin-top: 0
+  .send
+    grid-area: send
+    width: 30px
+    height: 30px
+    fill: $text_color
+    position: relative
+    top: 12px
+    cursor: pointer
+    transition: all .5s ease-in-out
+    &:hover
+      fill: $accent
+      background-color: transparent
+.addBlock
+  margin: 20px 0 0 0
+.loadedImages
+  position: relative
+  display: grid
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr))
+  grid-template-rows: auto
+  .prevImg
+    position: relative
+    background-repeat: no-repeat
+    background-size: contain
+    background-position: center
+    display: inline-block
+    width: 100%
+    height: 150px
+    margin: 20px 0 0 0
+.v-select
+  position: relative
+  border: 1px solid $profile_input_border_normal
+  text-align: left
+  width: 100%
+  min-height: 40px
+  height: auto
+  font-family: "Brandon Grotesque"
+  font-weight: 500
+  font-size: .8em
+  letter-spacing: 0.05em
+  background-color: transparent !important
+  outline: none
+  padding: 0 5px
+  color: $profile_input_text
+  margin-bottom: 17px
+  &.vs--single
+    height: 40px
+    .vs__dropdown-toggle
+      height: 40px !important
+      padding-top: 4px !important
+  &+label
+    position: absolute
+    top: 13px
+    left: 30px
+    font-family: "Brandon Grotesque"
+    font-weight: 300
+    font-size: 1em
+    letter-spacing: .05em
+    line-height: .8em
+    text-align: left
+    z-index: 1
+    color: #ccc
+    transition: all .3s ease-in-out
+  &+label.label_up
+    background-color: #fff
+    top: -7px
+    left: 24px
+    font-size: 13px
+    opacity: 1
+    color: $profile_input_text
+  .vs__dropdown-toggle
+    height: auto !important
+    padding-top: 6px !important
+    .vs__selected-options
+      .vs__selected
+        //width: 100%
+        height: 30px
+        background-color: transparent !important
+        //position: absolute //
+      //.vs__search
+        height: auto
+        position: relative
+        top: 7px
+    .vs__actions
+      top: 5px
+      position: relative
+  .vs__deselect
+    min-width: 12px
+  &.valid
+    border: 1px solid $profile_input_border_ok !important
+  &.err
+    border: 1px solid $profile_input_border_err !important
+.vdp-datepicker
+  display: block
+  div
+    input
+      display: block
+      width: 100%
+      background-color: transparent
+      border: none
+      outline: none
+.time-picker
+  display: block !important
+  width: 100% !important
+  font-family: "Brandon Grotesque" !important
+  font-weight: 300 !important
+  font-size: 0.8em !important
+  letter-spacing: .05em !important
+  height: 40px
+  outline: none
+  .display-time
+    border: none !important
+    display: block !important
+    width: 100% !important
+    height: 40px
+    font-family: "Brandon Grotesque" !important
+    font-weight: 300 !important
+    font-size: 1.1em !important
+    letter-spacing: .05em !important
+  .dropdown
+    .select-list
+      ul
+        li
+          &:hover
+            background: rgba($accent,.5) !important
+          &.active
+            background: $accent !important
+            &:hover
+              background: rgba($accent,.5) !important
+          &.hint
+            background: transparent !important
+  &.valid
+    border: 1px solid $profile_input_border_ok !important
+  &.err
+    border: 1px solid $profile_input_border_err !important
+  &+label.label_up
+    position: absolute
+    background-color: #fff
+    top: -10px
+    left: 8px
+    font-size: 13px
+    opacity: 1
+    color: $profile_input_text
+#whatToDo
+  height: 150px
+  top: 6px
+  &+label
+    top: 0 !important
+    font-size: 13px
+    color: $profile_input_text
+    font-weight: 300
+.addTaskAttach
+  position: relative
+  width: 32px
+  height: 32px
+  background: linear-gradient($gradient1 0%, $gradient2 0%, $gradient1 96.95%, $gradient1 100%)
+  border: 1px solid $gradient1
+  border-radius: 50%
+  transition: all .4s ease-in-out
+  &::after
+    content: '+'
+    position: absolute
+    display: block
+    top: 0
+    left: 9.5px
+    color: $btn_text_color
+    font-size: 1.2em
+    transition: all .4s ease-in-out
+  &:hover
+    background: transparent
+    &::after
+      color: $gradient1
+    span
+      color: $accent
+  span
+    position: absolute
+    top: 2px
+    left: 40px
+    width: 200px
+    font-family: "Brandon Grotesque"
+    font-weight: 300
+    font-size: .9em
+    text-align: left
+    transition: all .4s ease-in-out
+.changeStatus
+  display: block
+  //position: absolute
+  span
+    position: relative
+    top: 2px
+  .downStatus
+    position: absolute
+    display: none
+    width: 100px
+    background-color: rgba(#ffffff, 1)
+    border: 1px solid $accent
+    border-radius: 4px
+    height: auto
+    z-index: 999
+    &.show
+      display: inline-grid
+    ul
+      list-style: none
+      margin: 0
+      padding: 0
+      li
+        width: 100%
+        height: 30px
+        display: flex
+        justify-content: center
+        align-items: center
+        &:hover
+          background-color: rgba($accent, .5)
+          cursor: pointer
+.onmouse
+  cursor: pointer
+
+#ubo_сountryCitizenship,#ubo_country
+  .vs__dropdown-toggle
+    .vs__selected-options
+      .vs__selected
+        top: 0 !important
+#CompanyCountry
+  .vs__dropdown-toggle
+    .vs__selected-options
+      .vs__selected
+        top: 9px !important
+svg
+  path
+    fill: #cecfd0
+  g
+    path
+      fill: #cecfd0
+  &:hover
+    path
+      fill: $accent
+    g
+      path
+        fill: $accent
+.input_group_select
+  position: relative
+  margin: 10px 0
+  .countryImg
+    position: absolute
+    right: 36px
+    height: 40px
+    z-index: 999
+  .multiselect
+    height: 40px
+    .multiselect__tags
+      height: 40px
+      .multiselect__tags-wrap
+        .multiselect__tag
+          background: $accent
+          color: #fff
+          span
+            color: #fff !important
+          .multiselect__tag-icon
+            color: #fff !important
+            &:hover
+              background: $profile_input_border_err !important
+              color: #fff !important
+    &.ok
+      .multiselect__tags
+        border-radius: 0
+        border: 1px solid $profile_input_border_ok
+    &.err
+      .multiselect__tags
+        border-radius: 0
+        border: 1px solid $profile_input_border_err
+  .multiselect__option--highlight
+    background-color: $profile_input_border_ok
+    &[data-select="Press enter to select"]
+      &::after
+        background-color: $profile_input_border_ok
+  .multiselect__option--highlight.multiselect__option--selected
+    background-color: $accent
+    &[data-deselect="Press enter to remove"]
+      &::after
+        background-color: $accent
+  .multiselect__tags,.multiselect__option
+    span
+      text-align: left
