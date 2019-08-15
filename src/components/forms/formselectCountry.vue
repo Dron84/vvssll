@@ -1,6 +1,6 @@
 <template>
     <div class="input_group_select">
-        <div v-if="multiple==false">
+        <div v-if="multiple==false&&value!=null">
             <img :src="imgSrc" v-if="value.code!=''" class="countryImg">
         </div>
         <Multiselect v-if="countryComplect=='all'" v-model="value" :options="allCountry" :placeholder="placeholder" label="label" track-by="index" :searchable="true" @input="onSelect" :class="[value!='' ? okClass : errorClass]" :close-on-select="closeOnSelect" :multiple="multiple"></Multiselect>

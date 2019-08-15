@@ -74,7 +74,8 @@
                                                   labelName="Company website"></formInputwebsite>
                                 <!--<form-input @inputModel="setInvocePSP($event)" labelName="PSP"></form-input>-->
                                 <formselectCountry countryComplect="our"
-                                                   @selectedCountry="selectedCountry($event)"></formselectCountry>
+                                                   @selectedCountry="selectedCountry($event)"
+                                                   labelName="Select Country where open a company"></formselectCountry>
                                 <div class="centrize">
                                     <button class="button" @click.prevent="addInvoce()" style="margin-top: 20px;"
                                             data-dismiss="modal">Add
